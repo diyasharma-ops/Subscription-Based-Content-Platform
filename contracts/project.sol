@@ -47,7 +47,7 @@ contract SubscriptionPlatform {
         payable(owner).transfer(address(this).balance);
     }
 
-    /// New Function: Check if an address is currently subscribed
+    /// added a function
     function checkSubscriptionStatus(address _user) public view returns (bool isSubscribed, uint256 expiry) {
         expiry = subscribers[_user];
         isSubscribed = expiry >= block.timestamp;
