@@ -48,9 +48,11 @@ contract SubscriptionPlatform {
     }
 
     /// added a function
+//I have done this work 
     function checkSubscriptionStatus(address _user) public view returns (bool isSubscribed, uint256 expiry) {
         expiry = subscribers[_user];
         isSubscribed = expiry >= block.timestamp;
         return (isSubscribed, expiry);
     }
 }
+
